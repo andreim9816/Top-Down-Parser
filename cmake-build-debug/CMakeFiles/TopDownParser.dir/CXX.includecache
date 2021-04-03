@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Andrei/Facultate/AN 3/Sem 2/TopDownParser/main.cpp
+iostream
+-
+stack
+-
+string
+-
+fstream
+-
+bits/stdc++.h
+-
+vector
+-
+map
+-
+
