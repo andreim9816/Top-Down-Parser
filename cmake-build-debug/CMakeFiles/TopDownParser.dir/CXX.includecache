@@ -6,12 +6,14 @@
 
 #IncludeRegexTransform: 
 
-D:/Andrei/Facultate/AN 3/Sem 2/TopDownParser/main.cpp
+D:/Andrei/Facultate/AN 3/Sem 2/TC/Tema2/Top-Down-Parser/main.cpp
 iostream
 -
 stack
 -
 string
+-
+cstring
 -
 fstream
 -

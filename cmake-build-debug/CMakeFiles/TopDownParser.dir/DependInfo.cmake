@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Andrei/Facultate/AN 3/Sem 2/TopDownParser/main.cpp" "D:/Andrei/Facultate/AN 3/Sem 2/TopDownParser/cmake-build-debug/CMakeFiles/TopDownParser.dir/main.cpp.obj"
+  "D:/Andrei/Facultate/AN 3/Sem 2/TC/Tema2/Top-Down-Parser/main.cpp" "D:/Andrei/Facultate/AN 3/Sem 2/TC/Tema2/Top-Down-Parser/cmake-build-debug/CMakeFiles/TopDownParser.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

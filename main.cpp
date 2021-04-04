@@ -1,6 +1,7 @@
 #include <iostream>
 #include<stack>
 #include<string>
+#include<cstring>
 #include<fstream>
 #include<bits/stdc++.h>
 #include<vector>
@@ -62,6 +63,10 @@ public:
         }
     }
 
+    void write(string result) {
+        fout << result << '\n';
+    }
+
     string constructTree() {
         if (word.empty()) {
             cout << "The word is empty!";
@@ -117,13 +122,13 @@ public:
                     } else { // cazurile 6
                         if (topStackPath.second + 1 < transitionsMap[topStackPath.first].size()) {
                             //cazul 6a
-                            string transactionDr = transitionsMap[topStackPath.first][topStackPath.second + 1];
+                            string transitionDr = transitionsMap[topStackPath.first][topStackPath.second + 1];
 
                             removeFirstNCharsFromStack(stackCurrConfig,
                                                        transitionsMap[topStackPath.first][topStackPath.second].length());
                             stackPath.pop();
 
-                            addStringToStackReverse(stackCurrConfig, transactionDr);
+                            addStringToStackReverse(stackCurrConfig, transitionDr);
                             stackPath.push({topStackPath.first, topStackPath.second + 1});
 
                             state = 'q';
@@ -151,7 +156,6 @@ public:
                     return "EROARE!";
             }
         }
-
     }
 
     static void addStringToStackReverse(stack<char> &myStack, string myString) {
@@ -175,14 +179,18 @@ public:
 
             if (!terminal(top.first)) {
                 int transitionNumber = mapProductionsCode[top];
-                result = to_string(transitionNumber) + result;
+                ostringstream ss;
+                ss << transitionNumber;
+                result += ss.str();
             }
         }
+        reverse(result.begin(), result.end());
         return result;
     }
 
 
-    TopDownParser() = default;
+    TopDownParser() {
+    }
 
     TopDownParser(const string &fileInputName, const string &fileOutputName) {
         fin.open(fileInputName);
@@ -203,6 +211,6 @@ int main() {
     TopDownParser topDownParser("input.in", "output.out");
     topDownParser.read();
     string result = topDownParser.constructTree();
-    cout << result;
+    topDownParser.write(result);
     return 0;
 }
