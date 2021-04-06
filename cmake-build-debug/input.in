@@ -1,7 +1,4 @@
-a*a*a+a
-E T+E
-E T
-T F*T
-T F
+a+a
+E T+E T
+T F*T F
 F a
-
